@@ -1,0 +1,43 @@
+<html lang="en">
+ <body>
+    <section>
+      <!--for demo wrap-->
+      <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Full_Name</th>
+              <th>Price</th>
+              <th>Image</th>
+              <th>Feature</th>
+              <th><a class="btn btn-secondary" href="/add">Add</a></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+         {{#each toyGallerys }}
+            <tbody>
+            <tr>
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{price}} $</td>
+              <td><img src="{{img}}" alt="" class="image"></td>
+              <td><a class="btn btn-secondary" href="/edit/{{_id}}">Edit</a></td>
+              <td><a class="btn btn-danger" href="/delete/{{_id}}" onclick="return confirm('Are you sure about it ?')">Delete</a></td>
+            </tr>
+          </tbody>
+         {{/each}}
+        </table>
+      </div>
+    </section>
+
+    <!-- follow me template -->
+    <div class="made-with-love">
+    
+      <a target="_blank" href="https://codepen.io/nikhil8krishnan">TA</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+   <body>
+      <!-- gallery section start -->
+      <div class="gallery_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="gallery_taital">Our Products</h1>
+               </div>
+            </div>
+            <div class="">
+               <div class="gallery_section_2">
+                  <div class="row">
+                     {{#each toyGallerys }}
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="{{img}}" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                           <p class="priceText">{{price}} $</p>
+                        </div>
+                     </div>
+                     {{/each}}
+                  </div>
+               </div>
+            </div>
+            <div class="seemore_bt"><a href="#">See More</a></div>
+         </div>
+      </div>   
+   </body>
+</html>
